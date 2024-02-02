@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var anim = $AnimationPlayer
-@export var speed = 400
+@export var speed = 75
 
 func _ready():
 	pass
@@ -25,3 +25,8 @@ func get_input():
 func _physics_process(_delta):
 	get_input()
 	move_and_slide()
+
+
+func _on_door_body_entered(_body):
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://maps/map_1.tscn")
