@@ -199,4 +199,8 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(6, 6)
+limit_left = -20
+limit_top = -10
+limit_right = 220
+limit_bottom = 150
