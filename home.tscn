@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dbkhwo5gxruhk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_cqj2o"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="2_eqd7y"]
+[ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://player.tscn" id="2_eqd7y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl4wr"]
 texture = ExtResource("1_cqj2o")
