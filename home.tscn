@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbkhwo5gxruhk"]
+[gd_scene load_steps=10 format=3 uid="uid://dbkhwo5gxruhk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_cqj2o"]
-[ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://player.tscn" id="2_eqd7y"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_eqd7y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl4wr"]
 texture = ExtResource("1_cqj2o")
@@ -878,6 +878,21 @@ texture = ExtResource("1_cqj2o")
 [sub_resource type="TileSet" id="TileSet_m43qn"]
 sources/0 = SubResource("TileSetAtlasSource_cl4wr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vawyj"]
+size = Vector2(197, 66.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pav1e"]
+size = Vector2(197, 66.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcev1"]
+size = Vector2(306, 66.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rf4o"]
+size = Vector2(306, 178.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgyae"]
+size = Vector2(36, 17)
+
 [node name="home" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -888,3 +903,31 @@ layer_0/tile_data = PackedInt32Array(0, 655360, 4, 65536, 524288, 5, 131072, 524
 
 [node name="Player" parent="." instance=ExtResource("2_eqd7y")]
 position = Vector2(102, 74)
+
+[node name="wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(42, 162)
+shape = SubResource("RectangleShape2D_vawyj")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall"]
+position = Vector2(277, 161)
+shape = SubResource("RectangleShape2D_pav1e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(94, -24)
+shape = SubResource("RectangleShape2D_wcev1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(-158, 70)
+shape = SubResource("RectangleShape2D_2rf4o")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(348, 70)
+shape = SubResource("RectangleShape2D_2rf4o")
+
+[node name="door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(159, 147.5)
+shape = SubResource("RectangleShape2D_hgyae")
