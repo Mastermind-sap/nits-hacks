@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqss4oevrs15a"]
+[gd_scene load_steps=13 format=3 uid="uid://cqss4oevrs15a"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_7qhop"]
 [ext_resource type="Texture2D" uid="uid://iukwrfi8dbri" path="res://Art/idle.png" id="1_blsg3"]
+[ext_resource type="Texture2D" uid="uid://bokeg2dpl0sfe" path="res://Art/WalkUp.png" id="2_4l6d4"]
+[ext_resource type="Texture2D" uid="uid://1ews3bkdxhi0" path="res://Art/WalkRight.png" id="4_ih03v"]
+[ext_resource type="Texture2D" uid="uid://uiruht1vbyu6" path="res://Art/WalkLeft.png" id="5_vlvee"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw0nn"]
 radius = 6.0
@@ -36,6 +39,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_blsg3")]
+}
 
 [sub_resource type="Animation" id="Animation_2bmqn"]
 length = 0.001
@@ -64,10 +79,106 @@ tracks/1/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_2ggr2"]
+resource_name = "walk_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_ih03v")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_rj67v"]
+resource_name = "walk_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_vlvee"), ExtResource("5_vlvee"), ExtResource("5_vlvee")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_1o42a"]
+resource_name = "walk_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_4l6d4")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ehfq"]
 _data = {
 "RESET": SubResource("Animation_2bmqn"),
-"idle": SubResource("Animation_fqoew")
+"idle": SubResource("Animation_fqoew"),
+"walk_left": SubResource("Animation_rj67v"),
+"walk_right": SubResource("Animation_2ggr2"),
+"walk_up": SubResource("Animation_1o42a")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -79,7 +190,7 @@ shape = SubResource("CapsuleShape2D_bw0nn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_blsg3")
+texture = ExtResource("2_4l6d4")
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
