@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://xw2lb6rjtvhy"]
 
-[ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_pe2j8"]
+[ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_kp1c8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ec8d"]
 size = Vector2(326, 757)
@@ -9,7 +9,7 @@ size = Vector2(326, 757)
 size = Vector2(1151, 257.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gtiij"]
-texture = ExtResource("1_pe2j8")
+texture = ExtResource("1_kp1c8")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
