@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbkhwo5gxruhk"]
+[gd_scene load_steps=17 format=3 uid="uid://dbkhwo5gxruhk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_cqj2o"]
 [ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://player.tscn" id="2_eqd7y"]
@@ -890,6 +890,27 @@ size = Vector2(306, 66.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2rf4o"]
 size = Vector2(306, 178.25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8qtf"]
+size = Vector2(30, 32.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwngj"]
+size = Vector2(16, 29.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chcun"]
+size = Vector2(31, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pop0m"]
+size = Vector2(13, 17.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pe4a"]
+size = Vector2(33.5, 32.8125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lhsd"]
+size = Vector2(61.5, 17.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rr83"]
+size = Vector2(192.75, 31.8125)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgyae"]
 size = Vector2(36, 17)
 
@@ -925,6 +946,42 @@ shape = SubResource("RectangleShape2D_2rf4o")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
 position = Vector2(348, 70)
 shape = SubResource("RectangleShape2D_2rf4o")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall"]
+position = Vector2(15, 45.75)
+shape = SubResource("RectangleShape2D_a8qtf")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall"]
+position = Vector2(7, 77.375)
+shape = SubResource("RectangleShape2D_nwngj")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall"]
+position = Vector2(13.5, 118.5)
+shape = SubResource("RectangleShape2D_chcun")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="wall"]
+position = Vector2(134.5, 115)
+shape = SubResource("RectangleShape2D_pop0m")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="wall"]
+position = Vector2(181, 114)
+shape = SubResource("RectangleShape2D_pop0m")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="wall"]
+position = Vector2(71, 70)
+shape = SubResource("RectangleShape2D_pop0m")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="wall"]
+position = Vector2(174.75, 46.4063)
+shape = SubResource("RectangleShape2D_8pe4a")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="wall"]
+position = Vector2(79.25, 54)
+shape = SubResource("RectangleShape2D_0lhsd")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="wall"]
+position = Vector2(95.625, 29.0938)
+shape = SubResource("RectangleShape2D_7rr83")
 
 [node name="door" type="Area2D" parent="."]
 
