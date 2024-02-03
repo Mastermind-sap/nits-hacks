@@ -44,18 +44,15 @@ func _on_table_body_entered(_body):
 
 
 func _on_school_body_entered(_body):
-	print("CHUD")
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($dialogue_out/EzDialogue as EzDialogue).start_dialogue(marks_dialogue,state)
 
 
 func _on_tennis_friend_body_entered(_body):
-	print("CHUDD")	
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($dialogue_out/EzDialogue as EzDialogue).start_dialogue(tennis_dialogue,state)
 
 
 func _on_mom_call_body_entered(_body):
-	print("CHUDDD")	
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($dialogue_out/EzDialogue as EzDialogue).start_dialogue(mom_dialogue,state)
