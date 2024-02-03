@@ -1,27 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://p242ckgle04u"]
+[gd_scene load_steps=4 format=3 uid="uid://p242ckgle04u"]
 
 [ext_resource type="Script" path="res://Main/main.gd" id="1_16o1j"]
 [ext_resource type="PackedScene" uid="uid://0j6s1ee003ch" path="res://background/bg.tscn" id="2_nn5pl"]
+[ext_resource type="Texture2D" uid="uid://dk05q2m1hd7ut" path="res://Art/extra/title.png" id="3_su2yw"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_16o1j")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 427.0
-offset_top = 202.0
-offset_right = 745.0
-offset_bottom = 311.0
+offset_left = 429.0
+offset_top = 352.0
+offset_right = 747.0
+offset_bottom = 461.0
 text = "PLAY"
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 431.0
-offset_top = 359.0
+offset_top = 490.0
 offset_right = 749.0
-offset_bottom = 468.0
+offset_bottom = 599.0
 tooltip_text = "This button quits the game."
 text = "QUIT"
 
 [node name="BG" parent="." instance=ExtResource("2_nn5pl")]
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(590, 195)
+texture = ExtResource("3_su2yw")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
