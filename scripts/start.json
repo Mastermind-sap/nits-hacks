@@ -1,6 +1,6 @@
 [
 	{
-		"commands_raw": "Welcome to Pixel Harmony!!\nLet's get started with your \njourney to mental well being.\n\n---\n\nAre you excited ${player_name}??\n\n?> OK -> Ok\n?> Hell yeah!!! -> Very excited",
+		"commands_raw": "Welcome to Pixel Harmony!! Let's get started with your journey to mental well being.\n\n---\n\nAre you excited ${player_name}??\n\n?> OK -> Ok\n?> Hell yeah!!! -> Very excited",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "Start",

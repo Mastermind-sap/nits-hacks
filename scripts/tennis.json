@@ -1,0 +1,42 @@
+[
+	{
+		"commands_raw": "Wanna play tennis?\n\n?> Sure -> yes\n?> No I don't like excercise -> no",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "Start",
+		"position": [
+			-200,
+			-180
+		]
+	},
+	{
+		"commands_raw": "Exercise improves mental health by reducing anxiety, depression, and negative mood and by improving self-esteem and cognitive function.",
+		"gnode_name": "benefit",
+		"id": 1,
+		"name": "benefit",
+		"position": [
+			180,
+			-400
+		]
+	},
+	{
+		"commands_raw": "Oh cool!\n->benefit",
+		"gnode_name": "yes",
+		"id": 2,
+		"name": "yes",
+		"position": [
+			-20,
+			-400
+		]
+	},
+	{
+		"commands_raw": "You should excercise.\nDo you know?\n->benefit",
+		"gnode_name": "no",
+		"id": 3,
+		"name": "no",
+		"position": [
+			80,
+			-160
+		]
+	}
+]
