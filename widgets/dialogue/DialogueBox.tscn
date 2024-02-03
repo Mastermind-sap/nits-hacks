@@ -34,12 +34,14 @@ offset_right = 244.0
 offset_bottom = 93.0
 
 [node name="Label" type="Label" parent="DialogueBox/VBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_y3pu2")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jt2mk")
 text = "Hey"
+autowrap_mode = 3
 
 [node name="EzDialogue" type="Node" parent="."]
 script = ExtResource("3_ujv7k")

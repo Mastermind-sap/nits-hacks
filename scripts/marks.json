@@ -1,0 +1,22 @@
+[
+	{
+		"commands_raw": "You only scored a 69 out of 100.\n--- \nYou are upset.\n---\nWhat do you do?\n?>Meditate under a nearby tree ->info\n?> Come up with a new study plan \nto perform better next time ->info\n",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "Start",
+		"position": [
+			120,
+			-240
+		]
+	},
+	{
+		"commands_raw": "“The choice to meditate is an “emotion-focused” coping technique. In emotion-focused coping techniques, the aim is to reduce negative emotions. Meditation can give you a sense of calm, peace and balance that can benefit your emotional well-being and your overall health.”\n---\n“The choice to come up with a new study plan is a ‘problem-focused’ coping technique. Such techniques aim to tackle problems head-on and eliminate the root cause of stress.”\n---\nNeither choice is incorrect. One should try and adopt both emotion-focused and problem-focused coping techniques to deal with stress and to remove the stressors altogether.”",
+		"gnode_name": "info",
+		"id": 1,
+		"name": "info",
+		"position": [
+			140,
+			-360
+		]
+	}
+]
