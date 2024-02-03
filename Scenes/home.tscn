@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbkhwo5gxruhk"]
+[gd_scene load_steps=19 format=3 uid="uid://dbkhwo5gxruhk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_q8gj2"]
 [ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://Player/player.tscn" id="2_y2sqo"]
+[ext_resource type="PackedScene" uid="uid://rq5gem6qqok2" path="res://Components/Dialogue box/DialogueBox.tscn" id="3_ygni2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl4wr"]
 texture = ExtResource("1_q8gj2")
@@ -927,6 +928,8 @@ layer_0/tile_data = PackedInt32Array(0, 655360, 4, 65536, 524288, 5, 131072, 524
 
 [node name="Player" parent="." instance=ExtResource("2_y2sqo")]
 position = Vector2(102, 74)
+
+[node name="DialogueBox" parent="Player" instance=ExtResource("3_ygni2")]
 
 [node name="wall" type="StaticBody2D" parent="."]
 
