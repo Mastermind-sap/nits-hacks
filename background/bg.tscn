@@ -17,7 +17,7 @@
 script = ExtResource("1_ks2rp")
 
 [node name="sky" type="Sprite2D" parent="."]
-position = Vector2(578.5, 332.5)
+position = Vector2(576, 332)
 scale = Vector2(1.79531, 1.03281)
 texture = ExtResource("2_g0n58")
 
@@ -77,7 +77,7 @@ texture = ExtResource("11_mldy8")
 motion_mirroring = Vector2(1250, 0)
 
 [node name="Background3" type="Sprite2D" parent="mount-low"]
-position = Vector2(324, 400)
+position = Vector2(321, 398)
 texture = ExtResource("12_456sd")
 
 [node name="Background4" type="Sprite2D" parent="mount-low"]
