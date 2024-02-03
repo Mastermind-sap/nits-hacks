@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://0j6s1ee003ch"]
+
+[ext_resource type="Script" path="res://background/BG.gd" id="1_ks2rp"]
+[ext_resource type="Texture2D" uid="uid://cjdp7s5ygokuf" path="res://Art/extra/BG_DesertMountains/background1.png" id="2_g0n58"]
+[ext_resource type="Texture2D" uid="uid://wj5q2x8g2hvx" path="res://Art/extra/BG_DesertMountains/cloud1.png" id="3_fb7q2"]
+[ext_resource type="Texture2D" uid="uid://wj0hdbhkl3im" path="res://Art/extra/BG_DesertMountains/cloud2.png" id="4_cejyb"]
+[ext_resource type="Texture2D" uid="uid://b1a11q284wris" path="res://Art/extra/BG_DesertMountains/cloud3.png" id="5_y1kya"]
+[ext_resource type="Texture2D" uid="uid://cu1bumck3ntb" path="res://Art/extra/BG_DesertMountains/cloud4.png" id="6_y4346"]
+[ext_resource type="Texture2D" uid="uid://uhbbqogo2w6d" path="res://Art/extra/BG_DesertMountains/cloud5.png" id="7_j505f"]
+[ext_resource type="Texture2D" uid="uid://dxlj77q1o4c7q" path="res://Art/extra/BG_DesertMountains/cloud6.png" id="8_abukm"]
+[ext_resource type="Texture2D" uid="uid://b3u5ry5ngixap" path="res://Art/extra/BG_DesertMountains/cloud7.png" id="9_pebq7"]
+[ext_resource type="Texture2D" uid="uid://cycdj06yg2nax" path="res://Art/extra/BG_DesertMountains/cloud8.png" id="10_5ymxo"]
+[ext_resource type="Texture2D" uid="uid://4gys6g8agf0c" path="res://Art/extra/BG_DesertMountains/background2.png" id="11_mldy8"]
+[ext_resource type="Texture2D" uid="uid://cbg1kwyicgwbg" path="res://Art/extra/BG_DesertMountains/background3.png" id="12_456sd"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_ks2rp")
+
+[node name="sky" type="Sprite2D" parent="."]
+position = Vector2(576, 332)
+scale = Vector2(1.79531, 1.03281)
+texture = ExtResource("2_g0n58")
+
+[node name="clouds" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(1560, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="clouds"]
+position = Vector2(152, 110)
+texture = ExtResource("3_fb7q2")
+
+[node name="Cloud2" type="Sprite2D" parent="clouds"]
+position = Vector2(281, 105)
+texture = ExtResource("4_cejyb")
+
+[node name="Cloud3" type="Sprite2D" parent="clouds"]
+position = Vector2(599, 154)
+texture = ExtResource("5_y1kya")
+
+[node name="Cloud4" type="Sprite2D" parent="clouds"]
+position = Vector2(671, 184)
+texture = ExtResource("6_y4346")
+
+[node name="Cloud5" type="Sprite2D" parent="clouds"]
+position = Vector2(817, 50)
+texture = ExtResource("7_j505f")
+
+[node name="Cloud6" type="Sprite2D" parent="clouds"]
+position = Vector2(1110, 167)
+texture = ExtResource("8_abukm")
+
+[node name="Cloud9" type="Sprite2D" parent="clouds"]
+position = Vector2(158, 216)
+texture = ExtResource("8_abukm")
+
+[node name="Cloud7" type="Sprite2D" parent="clouds"]
+position = Vector2(1429, 52)
+texture = ExtResource("9_pebq7")
+
+[node name="Cloud8" type="Sprite2D" parent="clouds"]
+position = Vector2(1516, 80)
+texture = ExtResource("10_5ymxo")
+
+[node name="mount-high" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1260, 0)
+
+[node name="Background2" type="Sprite2D" parent="mount-high"]
+position = Vector2(321, 333)
+texture = ExtResource("11_mldy8")
+
+[node name="Background3" type="Sprite2D" parent="mount-high"]
+position = Vector2(949, 331)
+texture = ExtResource("11_mldy8")
+
+[node name="mount-low" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1250, 0)
+
+[node name="Background3" type="Sprite2D" parent="mount-low"]
+position = Vector2(321, 398)
+texture = ExtResource("12_456sd")
+
+[node name="Background4" type="Sprite2D" parent="mount-low"]
+position = Vector2(958, 399)
+texture = ExtResource("12_456sd")
