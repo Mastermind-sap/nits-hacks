@@ -1,0 +1,32 @@
+[
+	{
+		"commands_raw": "Welcome to Pixel Harmony!!\nLet's get started with your \njourney to mental well being.\n\n---\n\nAre you excited ${player_name}??\n\n?> OK -> Ok\n?> Hell yeah!!! -> Very excited",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "Start",
+		"position": [
+			0,
+			0
+		]
+	},
+	{
+		"commands_raw": "Oh! Like the enthusiasm\n",
+		"gnode_name": "very excited",
+		"id": 1,
+		"name": "Very excited",
+		"position": [
+			460,
+			200
+		]
+	},
+	{
+		"commands_raw": "Ok Let's go!",
+		"gnode_name": "ok",
+		"id": 2,
+		"name": "Ok",
+		"position": [
+			500,
+			340
+		]
+	}
+]

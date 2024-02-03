@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://noh0w36wbn6k"]
+
+[ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxOut.gd" id="1_0bc1h"]
+[ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxScript.gd" id="1_ghf8o"]
+[ext_resource type="JSON" path="res://start.json" id="2_u3b3u"]
+[ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="3_ujv7k"]
+
+[node name="dialogue_out" type="Node2D"]
+script = ExtResource("1_0bc1h")
+dialogue_json = ExtResource("2_u3b3u")
+
+[node name="DialogueBox" type="Node2D" parent="."]
+position = Vector2(28, 31)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_ghf8o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueBox"]
+offset_left = 1.0
+offset_right = 244.0
+offset_bottom = 93.0
+
+[node name="Label" type="Label" parent="DialogueBox/VBoxContainer"]
+layout_mode = 2
+text = "Hello how are you doing today?"
+
+[node name="EzDialogue" type="Node" parent="."]
+script = ExtResource("3_ujv7k")
+
+[connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]
+[connection signal="end_of_dialogue_reached" from="EzDialogue" to="." method="_on_ez_dialogue_end_of_dialogue_reached"]
