@@ -31,6 +31,7 @@ func _on_choice_selected(choice_index:int):
 	if(!is_dialogue_done):
 		($"../EzDialogue" as EzDialogue).next(choice_index)
 	else:
+		is_dialogue_done=false
 		($VBoxContainer/Label as Label).visible=false
 		clear_dialogue_box()
 

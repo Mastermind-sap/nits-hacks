@@ -1,10 +1,12 @@
 extends CharacterBody2D
 @onready var anim = $AnimationPlayer
 @export var speed = 75
-
+@export var study_dialogue:JSON
+@onready var state={
+	"player_name":"Saptarshi"
+}
 func _ready():
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=false
-	pass
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -31,3 +33,8 @@ func _physics_process(_delta):
 func _on_door_body_entered(_body):
 	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://maps/map_1.tscn")
+
+
+func _on_table_body_entered(_body):
+	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
+	($dialogue_out/EzDialogue as EzDialogue).start_dialogue(study_dialogue,state)

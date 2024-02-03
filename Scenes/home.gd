@@ -9,7 +9,3 @@ func _ready():
 	($Player/dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($Player/dialogue_out/EzDialogue as EzDialogue).start_dialogue(dialogue_json,state)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

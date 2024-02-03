@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxOut.gd" id="1_0bc1h"]
 [ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxScript.gd" id="1_ghf8o"]
-[ext_resource type="JSON" path="res://start.json" id="2_u3b3u"]
+[ext_resource type="JSON" path="res://scripts/start.json" id="2_6wets"]
 [ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="3_ujv7k"]
 [ext_resource type="FontFile" uid="uid://do0xwbntb0txu" path="res://text-themes/pixel_square/Pixel Square 10.ttf" id="4_y3pu2"]
 [ext_resource type="Texture2D" uid="uid://da7hdo7rr6qma" path="res://Art/extra/text-bg1.png" id="5_b6h32"]
@@ -21,7 +21,7 @@ texture_margin_bottom = 1.0
 
 [node name="dialogue_out" type="Node2D"]
 script = ExtResource("1_0bc1h")
-dialogue_json = ExtResource("2_u3b3u")
+dialogue_json = ExtResource("2_6wets")
 
 [node name="DialogueBox" type="Node2D" parent="."]
 position = Vector2(28, 31)
