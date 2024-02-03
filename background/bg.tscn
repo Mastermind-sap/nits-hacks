@@ -17,8 +17,8 @@
 script = ExtResource("1_ks2rp")
 
 [node name="sky" type="Sprite2D" parent="."]
-position = Vector2(576, 332)
-scale = Vector2(1.79531, 1.03281)
+position = Vector2(1260.75, 490.75)
+scale = Vector2(3.93516, 1.5289)
 texture = ExtResource("2_g0n58")
 
 [node name="clouds" type="ParallaxLayer" parent="."]

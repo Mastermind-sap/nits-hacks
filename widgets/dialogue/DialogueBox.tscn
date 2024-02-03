@@ -1,10 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://noh0w36wbn6k"]
+[gd_scene load_steps=8 format=3 uid="uid://noh0w36wbn6k"]
 
 [ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxOut.gd" id="1_0bc1h"]
 [ext_resource type="Script" path="res://widgets/dialogue/DialogueBoxScript.gd" id="1_ghf8o"]
 [ext_resource type="JSON" path="res://start.json" id="2_u3b3u"]
 [ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="3_ujv7k"]
 [ext_resource type="FontFile" uid="uid://do0xwbntb0txu" path="res://text-themes/pixel_square/Pixel Square 10.ttf" id="4_y3pu2"]
+[ext_resource type="Texture2D" uid="uid://da7hdo7rr6qma" path="res://Art/extra/text-bg1.png" id="5_b6h32"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt2mk"]
+resource_name = "Text-bg"
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("5_b6h32")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 
 [node name="dialogue_out" type="Node2D"]
 script = ExtResource("1_0bc1h")
@@ -22,9 +35,10 @@ offset_bottom = 93.0
 
 [node name="Label" type="Label" parent="DialogueBox/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.184314, 0, 0.678431, 1)
-theme_override_colors/font_shadow_color = Color(0, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_y3pu2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jt2mk")
 text = "Hello how are you doing today?"
 
 [node name="EzDialogue" type="Node" parent="."]
