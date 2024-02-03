@@ -1,6 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbkhwo5gxruhk"]
+[gd_scene load_steps=21 format=3 uid="uid://dbkhwo5gxruhk"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_q8gj2"]
+[ext_resource type="Script" path="res://Scenes/home.gd" id="1_v0rxs"]
+[ext_resource type="JSON" path="res://scripts/start.json" id="2_bitfb"]
 [ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://Player/player.tscn" id="2_y2sqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl4wr"]
@@ -917,7 +919,12 @@ size = Vector2(54, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgyae"]
 size = Vector2(36, 17)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6hl4"]
+size = Vector2(19.5, 17)
+
 [node name="home" type="Node2D"]
+script = ExtResource("1_v0rxs")
+dialogue_json = ExtResource("2_bitfb")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, 13)
@@ -962,7 +969,7 @@ position = Vector2(7, 77.375)
 shape = SubResource("RectangleShape2D_nwngj")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="wall"]
-position = Vector2(13.5, 118.5)
+position = Vector2(-2, 118)
 shape = SubResource("RectangleShape2D_chcun")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="wall"]
@@ -998,7 +1005,20 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(159, 134)
 shape = SubResource("RectangleShape2D_hgyae")
 
+[node name="table" type="Area2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(28.25, 115)
+shape = SubResource("RectangleShape2D_b6hl4")
+
 [connection signal="body_entered" from="door" to="Player" method="_on_door_body_entered"]
+[connection signal="body_entered" from="table" to="Player" method="_on_table_body_entered"]

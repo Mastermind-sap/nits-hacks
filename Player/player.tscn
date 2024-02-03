@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqss4oevrs15a"]
+[gd_scene load_steps=17 format=3 uid="uid://cqss4oevrs15a"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_7qhop"]
 [ext_resource type="Texture2D" uid="uid://iukwrfi8dbri" path="res://Art/idle.png" id="1_blsg3"]
 [ext_resource type="Texture2D" uid="uid://bokeg2dpl0sfe" path="res://Art/WalkUp.png" id="2_4l6d4"]
 [ext_resource type="Texture2D" uid="uid://d2yo2nomiiebw" path="res://Art/WalkDown.png" id="2_erp6p"]
+[ext_resource type="JSON" path="res://scripts/study.json" id="2_lcwv5"]
 [ext_resource type="Texture2D" uid="uid://1ews3bkdxhi0" path="res://Art/WalkRight.png" id="4_ih03v"]
 [ext_resource type="Texture2D" uid="uid://uiruht1vbyu6" path="res://Art/WalkLeft.png" id="5_vlvee"]
+[ext_resource type="PackedScene" uid="uid://noh0w36wbn6k" path="res://widgets/dialogue/DialogueBox.tscn" id="7_lflk4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bw0nn"]
 radius = 6.0
@@ -225,6 +227,7 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7qhop")
 speed = 200
+study_dialogue = ExtResource("2_lcwv5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bw0nn")
@@ -241,3 +244,6 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(6, 6)
+
+[node name="dialogue_out" parent="." instance=ExtResource("7_lflk4")]
+position = Vector2(-17, -56)
