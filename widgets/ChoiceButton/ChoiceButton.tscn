@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://widgets/ChoiceButton/ChoiceButton.gd" id="1_bb2eg"]
 
 [node name="ChoiceButton" type="Button"]
+theme_override_colors/font_hover_color = Color(0.219608, 0.447059, 1, 1)
+theme_override_colors/font_focus_color = Color(0.803922, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 script = ExtResource("1_bb2eg")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
