@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 75
 
 func _ready():
+	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=false
 	pass
 
 func get_input():

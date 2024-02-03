@@ -39,7 +39,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_y3pu2")
 theme_override_styles/normal = SubResource("StyleBoxTexture_jt2mk")
-text = "Hello how are you doing today?"
+text = "Hey"
 
 [node name="EzDialogue" type="Node" parent="."]
 script = ExtResource("3_ujv7k")
