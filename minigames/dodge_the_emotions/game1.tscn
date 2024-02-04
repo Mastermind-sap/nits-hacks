@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyfwty2q3rdse"]
+[gd_scene load_steps=9 format=3 uid="uid://cyfwty2q3rdse"]
 
 [ext_resource type="Script" path="res://minigames/dodge_the_emotions/game1.gd" id="1_buwof"]
 [ext_resource type="PackedScene" uid="uid://rkdnhqgf2hpj" path="res://minigames/dodge_the_emotions/Mob.tscn" id="2_3y8qa"]
+[ext_resource type="Texture2D" uid="uid://cbc0yq3y62got" path="res://minigames/dodge_the_emotions/art/bg.png" id="3_hujw6"]
 [ext_resource type="PackedScene" uid="uid://4vwrqjegqwpj" path="res://minigames/dodge_the_emotions/Player.tscn" id="3_xjs40"]
 [ext_resource type="PackedScene" uid="uid://ccqoreueuxdb7" path="res://minigames/dodge_the_emotions/HUD.tscn" id="4_ya2e1"]
 [ext_resource type="AudioStream" uid="uid://q2pf4fr8d0ks" path="res://minigames/dodge_the_emotions/art/House In a Forest Loop.ogg" id="5_7f0cm"]
@@ -17,14 +18,23 @@ point_count = 5
 script = ExtResource("1_buwof")
 mob_scene = ExtResource("2_3y8qa")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(584, 363)
+scale = Vector2(0.503472, 0.587963)
+texture = ExtResource("3_hujw6")
+
+[node name="ColorRect" type="ColorRect" parent="background"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 6.0
+offset_left = -1159.94
+offset_top = -617.386
+offset_right = -1153.94
+offset_bottom = -617.386
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.219608, 0.372549, 0.380392, 1)
+color = Color(0.537255, 0.435294, 0.141176, 0.627451)
 
 [node name="Player" parent="." instance=ExtResource("3_xjs40")]
 

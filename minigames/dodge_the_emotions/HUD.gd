@@ -11,7 +11,7 @@ func show_message(text):
 func show_game_over():
 	show_message("Game Over")
 	await $MessageTimer.timeout
-	$MessageLabel.text = "Dodge the\nEmotions"
+	$MessageLabel.text = "Dodge the\nNegative Emotions"
 	$MessageLabel.show()
 	await get_tree().create_timer(1).timeout
 	$StartButton.show()
