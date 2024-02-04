@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://q2pf4fr8d0ks"
+path="res://.godot/imported/House In a Forest Loop.ogg-3f900b8e7a090adf002f6a627c5f88f2.oggvorbisstr"
+
+[deps]
+
+source_file="res://minigames/dodge_the_emotions/art/House In a Forest Loop.ogg"
+dest_files=["res://.godot/imported/House In a Forest Loop.ogg-3f900b8e7a090adf002f6a627c5f88f2.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
