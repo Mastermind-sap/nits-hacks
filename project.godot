@@ -21,6 +21,11 @@ BgMusic="*res://background/bg_music.tscn"
 StageManager="*res://background/StageManager.tscn"
 Global="*res://global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ez_dialogue/plugin.cfg")
