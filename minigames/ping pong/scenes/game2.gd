@@ -8,14 +8,20 @@ func _on_ball_timer_timeout():
 
 func _on_score_left_body_entered(body):
 	score[1] += 1
-	#if score[1] > 4:
-		#gameOver()
+	if score[1] > 1:
+		gameOver()
 	$Hud/CPUScore.text = "Friend "+str(score[1])
 	$BallTimer.start()
 
 func _on_score_right_body_entered(body):
 	score[0] += 1
-	#if score[0] > 4:
-		#gameOver()
+	if score[0] > 1:
+		gameOver()
 	$Hud/PlayerScore.text = "You "+str(score[0])
 	$BallTimer.start()
+
+func gameOver():
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://maps/map_1.tscn")
+	
+	
