@@ -1,1 +1,32 @@
-[{"commands_raw":"Welcome to Pixel Harmony!! Let's get started with your journey to mental well being.\n","gnode_name":"start","id":0,"name":"Start","position":[-160,-340]},{"commands_raw":"Oh! Like the enthusiasm\n","gnode_name":"very excited","id":1,"name":"Very excited","position":[460,200]},{"commands_raw":"Ok Let's go!","gnode_name":"ok","id":2,"name":"Ok","position":[500,340]}]
+[
+	{
+		"commands_raw": "Welcome to Pixel Harmony!! Let's get started with your journey to mental well being.\n",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "Start",
+		"position": [
+			-160,
+			-340
+		]
+	},
+	{
+		"commands_raw": "Oh! Like the enthusiasm\n",
+		"gnode_name": "very excited",
+		"id": 1,
+		"name": "Very excited",
+		"position": [
+			460,
+			200
+		]
+	},
+	{
+		"commands_raw": "Ok Let's go!",
+		"gnode_name": "ok",
+		"id": 2,
+		"name": "Ok",
+		"position": [
+			500,
+			340
+		]
+	}
+]
