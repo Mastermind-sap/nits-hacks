@@ -34,8 +34,11 @@ func _physics_process(_delta):
 
 
 func _on_door_body_entered(_body):
-	await get_tree().physics_frame
+	#await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://maps/map_1.tscn")
+	#StageManager.changeStage(StageManager.MAP1)
+	position.x=389
+	position.y=312
 
 
 func _on_table_body_entered(_body):
@@ -56,3 +59,12 @@ func _on_tennis_friend_body_entered(_body):
 func _on_mom_call_body_entered(_body):
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($dialogue_out/EzDialogue as EzDialogue).start_dialogue(mom_dialogue,state)
+
+
+func _on_indoor_body_entered(_body):
+	#await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://Scenes/home.tscn")
+	#StageManager.changeStage(StageManager.HOME)
+	position.x=157
+	position.y=104
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://xw2lb6rjtvhy"]
+[gd_scene load_steps=14 format=3 uid="uid://xw2lb6rjtvhy"]
 
 [ext_resource type="Texture2D" uid="uid://cv8whjeqxyp2q" path="res://Art/PokemonLike.png" id="1_kp1c8"]
 [ext_resource type="PackedScene" uid="uid://cqss4oevrs15a" path="res://Player/player.tscn" id="2_om0rc"]
@@ -3174,6 +3174,9 @@ size = Vector2(22.5, 24.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2du5i"]
 size = Vector2(17, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oh72l"]
+size = Vector2(52, 12)
+
 [node name="map1" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -3234,6 +3237,13 @@ visibility_layer = 2
 position = Vector2(155, 368)
 shape = SubResource("RectangleShape2D_2du5i")
 
+[node name="indoor" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="indoor"]
+position = Vector2(399, 296)
+shape = SubResource("RectangleShape2D_oh72l")
+
 [connection signal="body_entered" from="school" to="Player" method="_on_school_body_entered"]
 [connection signal="body_entered" from="tennis_friend" to="Player" method="_on_tennis_friend_body_entered"]
 [connection signal="body_entered" from="mom_call" to="Player" method="_on_mom_call_body_entered"]
+[connection signal="body_entered" from="indoor" to="Player" method="_on_indoor_body_entered"]
