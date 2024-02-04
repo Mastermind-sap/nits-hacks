@@ -15,6 +15,7 @@ func show_game_over():
 	$MessageLabel.show()
 	await get_tree().create_timer(1).timeout
 	$StartButton.show()
+	$EndButton.show()
 
 
 func update_score(score):
@@ -23,8 +24,16 @@ func update_score(score):
 
 func _on_StartButton_pressed():
 	$StartButton.hide()
+	$EndButton.hide()
 	start_game.emit()
 
 
 func _on_MessageTimer_timeout():
 	$MessageLabel.hide()
+
+
+func _on_end_button_pressed():
+	$StartButton.hide()
+	$EndButton.hide()
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://maps/map_1.tscn")

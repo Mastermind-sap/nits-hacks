@@ -9,6 +9,8 @@ extends CharacterBody2D
 	"player_name":"Saptarshi"
 }
 func _ready():
+	position.x=Global.x
+	position.y=Global.y
 	($dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=false
 
 func get_input():
@@ -34,11 +36,11 @@ func _physics_process(_delta):
 
 
 func _on_door_body_entered(_body):
-	#await get_tree().physics_frame
+	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://maps/map_1.tscn")
 	#StageManager.changeStage(StageManager.MAP1)
-	position.x=389
-	position.y=312
+	Global.x=969
+	Global.y=442
 
 
 func _on_table_body_entered(_body):
@@ -62,9 +64,23 @@ func _on_mom_call_body_entered(_body):
 
 
 func _on_indoor_body_entered(_body):
-	#await get_tree().physics_frame
+	await get_tree().physics_frame
 	get_tree().change_scene_to_file("res://Scenes/home.tscn")
 	#StageManager.changeStage(StageManager.HOME)
-	position.x=157
-	position.y=104
+	Global.x=156
+	Global.y=112
 	
+
+
+func _on_tennis_body_entered(body):
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://minigames/ping pong/scenes/game2.tscn")
+	Global.x=562
+	Global.y=366
+
+
+func _on_meditate_body_entered(body):
+	await get_tree().physics_frame
+	get_tree().change_scene_to_file("res://minigames/dodge_the_emotions/game1.tscn")
+	Global.x=654
+	Global.y=142
