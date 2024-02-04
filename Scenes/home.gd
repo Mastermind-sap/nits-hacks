@@ -8,4 +8,3 @@ extends Node2D
 func _ready():
 	($Player/dialogue_out/DialogueBox/VBoxContainer/Label as Label).visible=true
 	($Player/dialogue_out/EzDialogue as EzDialogue).start_dialogue(dialogue_json,state)
-
