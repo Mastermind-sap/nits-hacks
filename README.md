@@ -226,9 +226,14 @@
 <section id="team">
   <h2>🧑‍💻 Team Members </h2>
   <ul>
-    <li><strong>Team Leader:</strong> Sohail Kazi</li>
-    <li><strong>Machine Learning Expert:</strong> Sacheth Koushik</li>
-    <li><strong>Developers:</strong> Krishnam Maheshwari, Saptarshi Adhikari</li>
+    <li><strong>Team Leader:</strong> Sohail Kazi (aka <a href="https://github.com/sohailkazi">sohailkazi</a>)</li>
+    <li><strong>Machine Learning Expert:</strong> Sacheth Koushik (aka <a href="https://github.com/Sacheth-Koushik">Sacheth-Koushik</a>)</li>
+    <li><strong>Developers:</strong> 
+      <ul>
+        <li>Krishnam Maheshwari (aka <a href="https://github.com/Krishnam2411">Krishnam2411</a>)</li>
+        <li> Saptarshi Adhikari (aka <a href="https://github.com/Mastermind-sap">Mastermind-sap</a>)</li>
+      </ul>
+    </li>
   </ul>
 </section>
 
